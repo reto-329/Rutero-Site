@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::GALLERY PAGE::</title>
+    <link rel="icon" href="Images/image.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* HEADING */
+        .heading-section div {
+            background-color: #87CEEB;
+            padding: 60px;
+            height: 60px;
+            color: white;
+            position: relative;
+            background-image: url(Images/pgg.jpg);
+            background-size: cover;
+            background-blend-mode: multiply; /* This blend mode will blend the image with the background color */
+            background-attachment: fixed;
+            opacity: 0.4; /* Adjust the opacity value as needed */
+            font-size: 30px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="header2">
+        <div class="header2-img"><a href="/"><img src="Images/image.png" width="70px"></a></div>
+        <nav class="header2-nav slide-in">
+            <a href="/">HOME</a>
+            <a href="/about">ABOUT US</a>
+            <a href="/admission">ADMISSION</a>
+            <a href="/gallery">GALLERY</a>
+            <a href="/contact">CONTACT US</a>
+        </nav>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.header2-nav');
+            const hamburger = document.querySelector('.hamburger');
+            nav.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+    </script>   
+    
+    <section class="heading-section"> 
+        <div>
+            <h3>GALLERY</h3>
+        </div>
+    </section>
+
+    <section>
+        <div id="page2"class="gallery page active">
+            <img src="Images/lab/lab1.jpg" alt="Image 1" onclick="openModal('Images/lab/lab1.jpg', 0)">
+            <img src="Images/lab/lab2.jpg" alt="Image 2" onclick="openModal('Images/lab/lab2.jpg', 1)">
+            <img src="Images/lab/lab3.1.jpg" alt="Image 3" onclick="openModal('Images/lab/lab3.jpg', 2)">
+            <img src="Images/lab/lab4.jpg" alt="Image 4" onclick="openModal('Images/lab/lab4.jpg', 3)">
+            <img src="Images/lab/lab5.jpg" alt="Image 5" onclick="openModal('Images/lab/lab5.jpg', 4)">
+            <img src="Images/lab/lab6.jpg" alt="Image 6" onclick="openModal('Images/lab/lab6.jpg', 5)">
+            <img src="Images/lab/lab7.1.jpg" alt="Image 7" onclick="openModal('Images/lab/lab7.jpg', 6)">
+            <img src="Images/lab/lab8.1.jpg" alt="Image 8" onclick="openModal('Images/lab/lab8.jpg', 7)">
+            <img src="Images/lab/lab9.jpg" alt="Image 9" onclick="openModal('Images/lab/lab9.jpg', 8)">
+            <img src="Images/lab/lab10.jpg" alt="Image 10" onclick="openModal('Images/lab/lab10.jpg', 9)">
+            <img src="Images/lab/lab11.jpg" alt="Image 11" onclick="openModal('Images/lab/lab11.jpg', 10)">
+            <img src="Images/lab/lab12.jpg" alt="Image 12" onclick="openModal('Images/lab/lab12.jpg', 11)">
+            <img src="Images/lab/lab13.1.jpg" alt="Image 13" onclick="openModal('Images/lab/lab13.jpg', 12)">
+            <img src="Images/lab/lab14.jpg" alt="Image 14" onclick="openModal('Images/lab/lab14.jpg', 13)">
+            <img src="Images/lab/lab15.jpg" alt="Image 15" onclick="openModal('Images/lab/lab15.jpg', 14)">
+            <img src="Images/lab/lab16.jpg" alt="Image 16" onclick="openModal('Images/lab/lab16.jpg', 15)">
+            <img src="Images/lab/lab17.jpg" alt="Image 17" onclick="openModal('Images/lab/lab17.jpg', 16)">
+            <img src="Images/lab/lab18.1.jpg" alt="Image 18" onclick="openModal('Images/lab/lab18.jpg', 17)">
+            <img src="Images/lab/lab22.jpg" alt="Image 19" onclick="openModal('Images/lab/lab22.jpg', 18)">
+            <img src="Images/lab/lab23.jpg" alt="Image 20" onclick="openModal('Images/lab/lab23.jpg', 19)">
+        </div>
+
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+              <img id="modalImage">
+              <a class="prev2" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next2" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+
+        <div class="page-change">
+            <p><a href="/gallery#page1">1</a></p>
+            <p><a href="/gallery2#page2">2</a></p>
+            <p><a href="/gallery3#page3">3</a></p>
+            <p><a href="/gallery#page1">PREV</a></p>
+            <p><a href="/gallery3#page3">NEXT</a></p>
+        </div>
+
+        <script>
+            var slideIndex = 0;
+            var modalImages = document.querySelectorAll('.gallery img');
+            var modal = document.getElementById('myModal');
+            var modalImg = document.getElementById('modalImage');
+        
+            function openModal(imagePath, index) {
+              modal.style.display = 'block';
+              modalImg.src = imagePath;
+              slideIndex = index;
+            }
+        
+            function closeModal() {  
+              modal.style.display = 'none';
+            }
+        
+            function plusSlides(n) {
+              slideIndex += n;
+              if (slideIndex >= modalImages.length) {
+                slideIndex = 0;
+              } else if (slideIndex < 0) {
+                slideIndex = modalImages.length - 1;
+              }
+              modalImg.src = modalImages[slideIndex].src;
+            }
+        </script>
+
+    </section>
+
+    <section class="footer-section">
+        <div class="footer-section1">
+            <h3>OUR GOAL</h3>
+            <p>The major goal of Rutero Model
+                School is to empower its students,
+                leveraging its abundant facilities,
+                with all they need to lead fulfilling 
+                lives anywhere in the world.
+            </p>
+        </div>
+        
+        <div class="footer-section2">
+            <h3>THE SCHOOL</h3>
+            <p><a href="#">HOME PAGE</a></p>
+            <p><a href="#">ABOUT US</a></p>
+            <p><a href="#">OUR GALLERY</a></p>
+            <a href="#">CONTACT US</a>
+        </div>
+    
+        <div class="footer-section3">
+            <h3>USEFUL CONTACTS</h3>
+            <p>
+                Principal<br>
+                Tel: +2347033697841<br>
+                Email: principal@rutero.com
+            </p>
+            
+            <p>
+                Vice Principal (Academics)<br>
+                Tel: +2347033697841
+            </p>
+
+            <p>
+               College Secretary<br>
+               Tel: +2347033697841
+            </p>        
+        </div>
+
+        <div class="footer-section4">
+            <h3>CONTACTS</h3>
+            <p>
+                Rutero Model School,<br>
+                Jeddo,<br>
+                Delta State,<br>
+                Nigeria. <br>
+                Tel: +2347033697841 <br>
+                Email: principal@rutero.com
+            </p>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 POWERED BY RETO TECH</p>
+    </footer>
+
+</body>
+</html>

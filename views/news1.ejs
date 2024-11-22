@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::NEWS PAGE::</title>
+    <link rel="icon" href="Images/image.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* HEADING */
+        .heading-section div {
+            background-color: #87CEEB;
+            padding: 60px;
+            height: 60px;
+            color: white;
+            position: relative;
+            background-image: url(Images/pgg.jpg);
+            background-size: cover;
+            background-blend-mode: multiply; /* This blend mode will blend the image with the background color */
+            background-attachment: fixed;
+            opacity: 0.4; /* Adjust the opacity value as needed */
+            font-size: 30px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header-img"><a href="/"><img src="Images/image.png" width="70px"></a></div>
+        <nav class="header-nav slide-in">
+            <a href="/">HOME</a>
+            <a href="/about">ABOUT US</a>
+            <a href="/admission">ADMISSION</a>
+            <a href="/gallery">GALLERY</a>
+            <a href="/contact">CONTACT US</a>
+        </nav>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.header-nav');
+            const hamburger = document.querySelector('.hamburger');
+            nav.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+    </script>   
+    
+    <section class="heading-section"> 
+        <div>
+            <h3>OUR QUEST FOR EXCELLENCE</h3>
+        </div>
+    </section>
+
+    <section class="news-about-section">
+        <p>
+            Rutero Model School examines the challenges parents and guardians face early in the lives of their children. 
+            How best would they prepare them for the arduous but interesting journey through life? How best would they 
+            lay a solid foundation upon which the child's lifestyle and career will be built? <br><br>
+
+            Today, the world is moving at a very fast pace; education should be dynamic enough to keep up with the times. 
+            Nigeria's case is rather special. Between declining quality in public schools and the desire of parents to give 
+            their children contemporary education lies a conflict. Discerning parents want value-added, functional, and 
+            responsive education for their children, with appropriate reinforcements in a conducive environment with global 
+            standard structures, facilities, and up-to-date teachers. <br><br>
+
+            Can parents find all these in one institution in Jeddo Town? The answer is yes! Rutero Model School has, through 
+            deliberate thought, creative planning, and diligent execution, positioned itself as the appropriate vehicle for the 
+            proper education of the new millennium child who does not just want to see the stars but to touch them. <br><br>
+
+            At Rutero Model School, we strive relentlessly and diligently to nurture that wish and that great decision of parents 
+            and guardians to reality. To us, this is a sacred duty, an obligation that calls for religious thoroughness. We are equal 
+            to the task; our research department is in an endless search for perfection and excellence to serve you better. <br><br>
+
+            Rutero Model School is a partnership with parents and a covenant with excellence. Our target is to transform our toddlers 
+            into knowledgeable and confident children at the end of their stay in Rutero. It is on their promising shoulders that the 
+            hope for a decent future lies for the family, the nation, and the world. Rutero will nurture children that will think and 
+            act for Nigeria. 
+
+            
+
+        </p>
+    </section>
+
+    <section class="footer-section">
+        <div class="footer-section1">
+            <h3>OUR GOAL</h3>
+            <p>The major goal of Rutero Model School is to empower its students, leveraging its abundant facilities, with all they need to lead fulfilling lives anywhere in the world.</p>
+        </div>
+        
+        <div class="footer-section2">
+            <h3>THE SCHOOL</h3>
+            <p><a href="#">HOME PAGE</a></p>
+            <p><a href="#">ABOUT US</a></p>
+            <p><a href="#">OUR GALLERY</a></p>
+            <a href="#">CONTACT US</a>
+        </div>
+    
+        <div class="footer-section3">
+            <h3>USEFUL CONTACTS</h3>
+            <p>
+                Principal<br>
+                Tel: +2347033697841<br>
+                Email: principal@rutero.com
+            </p>
+            
+            <p>
+                Vice Principal (Academics)<br>
+                Tel: +2347033697841
+            </p>
+
+            <p>
+               College Secretary<br>
+               Tel: +2347033697841
+            </p>        
+        </div>
+
+        <div class="footer-section4">
+            <h3>CONTACTS</h3>
+            <p>
+                Rutero Model School,<br>
+                Jeddo,<br>
+                Delta State,<br>
+                Nigeria.<br>
+                Tel: +2347033697841<br>
+                Email: principal@rutero.com
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 POWERED BY RETO TECH</p>
+    </footer>
+
+</body>
+</html>

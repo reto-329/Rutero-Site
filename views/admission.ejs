@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::ADMISSION PAGE::</title>
+    <link rel="icon" href="Images/image.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* HEADING */
+        .heading-section div {
+            background-color: #87CEEB;
+            padding: 60px;
+            height: 60px;
+            color: white;
+            position: relative;
+            background-image: url(Images/pgg.jpg);
+            background-size: cover;
+            background-blend-mode: multiply; /* This blend mode will blend the image with the background color */
+            background-attachment: fixed;
+            opacity: 0.4; /* Adjust the opacity value as needed */
+            font-size: 30px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header-img"><a href="/"><img src="Images/image.png" width="70px"></a></div>
+        <nav class="header-nav slide-in">
+            <a href="/">HOME</a>
+            <a href="/about">ABOUT US</a>
+            <a href="/admission">ADMISSION</a>
+            <a href="/gallery">GALLERY</a>
+            <a href="/contact">CONTACT US</a>
+        </nav>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.header-nav');
+            const hamburger = document.querySelector('.hamburger');
+            nav.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+    </script>   
+    
+    <section class="heading-section"> 
+        <div>
+            <h3>ADMISSION</h3>
+        </div>
+    </section>
+
+    <section class="process-section">
+        <div class="process process1">
+            <h3>ADMISSION PROCESS</h3>
+        </div>
+
+        <div class="process process2">
+            <h3>ENTRANCE EXAMINATION</h3>
+        </div>
+        
+    </section>
+
+ 
+
+
+
+
+
+
+
+    <section class="footer-section">
+        <div class="footer-section1">
+            <h3>OUR GOAL</h3>
+            <p>The major goal of Rutero Model
+                School is to empower its students,
+                leveraging its abundant facilities,
+                with all they need to lead fulfilling 
+                lives anywhere in the world.
+            </p>
+        </div>
+        
+        <div class="footer-section2">
+            <h3>THE SCHOOL</h3>
+            <p><a href="#">HOME PAGE</a></p>
+            <p><a href="#">ABOUT US</a></p>
+            <p><a href="#">OUR GALLERY</a></p>
+            <a href="#">CONTACT US</a>
+        </div>
+    
+        <div class="footer-section3">
+            <h3>USEFUL CONTACTS</h3>
+            <p>
+                Principal<br>
+                Tel: +2347033697841<br>
+                Email: principal@rutero.com
+            </p>
+            
+            <p>
+                Vice Principal (Academics)<br>
+                Tel: +2347033697841
+            </p>
+
+            <p>
+               College Secretary<br>
+               Tel: +2347033697841
+            </p>        
+        </div>
+
+        <div class="footer-section4">
+            <h3>CONTACTS</h3>
+            <p>
+                Rutero Model School,<br>
+                Jeddo,<br>
+                Delta State,<br>
+                Nigeria. <br>
+                Tel: +2347033697841 <br>
+                Email: principal@rutero.com
+            </p>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 POWERED BY RETO TECH</p>
+    </footer>
+
+</body>
+</html>

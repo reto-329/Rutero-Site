@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::NEWS PAGE::</title>
+    <link rel="icon" href="Images/image.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* HEADING */
+        .heading-section div {
+            background-color: #87CEEB;
+            padding: 60px;
+            height: 60px;
+            color: white;
+            position: relative;
+            background-image: url(Images/pgg.jpg);
+            background-size: cover;
+            background-blend-mode: multiply; /* This blend mode will blend the image with the background color */
+            background-attachment: fixed;
+            opacity: 0.4; /* Adjust the opacity value as needed */
+            font-size: 30px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header-img"><a href="/"><img src="Images/image.png" width="70px"></a></div>
+        <nav class="header-nav slide-in">
+            <a href="/">HOME</a>
+            <a href="/about">ABOUT US</a>
+            <a href="/admission">ADMISSION</a>
+            <a href="/gallery">GALLERY</a>
+            <a href="/contact">CONTACT US</a>
+        </nav>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.header-nav');
+            const hamburger = document.querySelector('.hamburger');
+            nav.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+    </script>   
+    
+    <section class="heading-section"> 
+        <div>
+            <h3>QUALITY OF EDUCATION</h3>
+        </div>
+    </section>
+
+    <section class="news-about-section">
+        <p>
+            Rutero Model School is synonymous with qualitative education. It is the school of choice for parents and guardians who have a 
+            thirst for excellence and insist on getting it. In both the pre-nursery, nursery, and primary sections, the Froebel system is 
+            generally adapted, with a specialized method of teaching popularly known as Montessori fully applied. <br><br>
+
+            The school has invested considerable funds in teaching aids to be well equipped for this task. Qualified teachers, further trained 
+            and continuously retrained, are employed.<br><br>
+
+            Rutero Model School is, therefore, the gateway to the correct education foundation for your children and wards. Examinations will be 
+            conducted in accordance with the guidelines of Continuous Assessment from the state Ministry of Education. Pupils found weak in any 
+            subject or aspect of study will be encouraged to book for extra coaching after school hours under the school's special guidance scheme. 
+            Failures will be made to either repeat the class or even be demoted.<br><br>
+            
+            On successful completion of nursery education at Rutero Model School, admission to the primary section is automatic. For children coming 
+            from other nursery schools, a written examination is conducted to determine the best class to place them. The transition class comes in as 
+            a buffer and grooming ground for many such entrants.<br><br>
+            
+            At the age of about ten years, the pupils sit for the first school leaving certificate and common entrance examinations to private and 
+            government-owned secondary schools.
+            
+
+        </p>
+    </section>
+
+    <section class="footer-section">
+        <div class="footer-section1">
+            <h3>OUR GOAL</h3>
+            <p>The major goal of Rutero Model School is to empower its students, leveraging its abundant facilities, with all they need to lead fulfilling lives anywhere in the world.</p>
+        </div>
+        
+        <div class="footer-section2">
+            <h3>THE SCHOOL</h3>
+            <p><a href="#">HOME PAGE</a></p>
+            <p><a href="#">ABOUT US</a></p>
+            <p><a href="#">OUR GALLERY</a></p>
+            <a href="#">CONTACT US</a>
+        </div>
+    
+        <div class="footer-section3">
+            <h3>USEFUL CONTACTS</h3>
+            <p>
+                Principal<br>
+                Tel: +2347033697841<br>
+                Email: principal@rutero.com
+            </p>
+            
+            <p>
+                Vice Principal (Academics)<br>
+                Tel: +2347033697841
+            </p>
+
+            <p>
+               College Secretary<br>
+               Tel: +2347033697841
+            </p>        
+        </div>
+
+        <div class="footer-section4">
+            <h3>CONTACTS</h3>
+            <p>
+                Rutero Model School,<br>
+                Jeddo,<br>
+                Delta State,<br>
+                Nigeria.<br>
+                Tel: +2347033697841<br>
+                Email: principal@rutero.com
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 POWERED BY RETO TECH</p>
+    </footer>
+
+</body>
+</html>

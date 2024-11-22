@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::CONTACT US PAGE::</title>
+    <link rel="icon" href="Images/image.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* HEADING */
+        .heading-section div {
+            background-color: #87CEEB;
+            padding: 60px;
+            height: 60px;
+            color: white;
+            position: relative;
+            background-image: url(Images/pgg.jpg);
+            background-size: cover;
+            background-blend-mode: multiply;
+            background-attachment: fixed;
+            opacity: 0.4;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+
+        /* Success message */
+        #success-message {
+            display: none;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid #87CEEB;
+            background-color: #87CEEB;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-img"><a href="/"><img src="Images/image.png" width="70px"></a></div>
+        <nav class="header-nav slide-in">
+            <a href="/">HOME</a>
+            <a href="/about">ABOUT US</a>
+            <a href="/admission">ADMISSION</a>
+            <a href="/gallery">GALLERY</a>
+            <a href="/contact">CONTACT US</a>
+        </nav>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.header-nav');
+            const hamburger = document.querySelector('.hamburger');
+            nav.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+    </script>
+
+    <section class="heading-section">
+        <div>
+            <h3>CONTACT US</h3>
+        </div>
+    </section>
+
+    <section class="map">
+        <div style="text-align: center;">
+            <iframe src="https://maps.google.com/maps?q=5.593423479058982, 5.707094022918836&z=15&output=embed"
+            width="90%"
+            height="450"
+            style="border: 1px solid #ccc;"
+            allowfullscreen="true"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact1">
+            <div>
+                <img src="Images/Capture.PNG" width="60px" alt="address"><span>Rutero Model School
+                No 9 Udumukpokpor Street, Opposite Jeddo Pry Sch, Jeddo Okpe LGA of Delta State, Nigeria.
+                </span>
+            </div>
+            <div>
+                <img src="Images/Capture1.PNG" width="60px" alt="phone-number"><span>+234-(0)7033697841. +234-(0)8039472683.</span>
+            </div>
+            <div>
+                <img src="Images/Capture2.PNG" width="60px" alt="email"><span>ruteroschool@yahoo.com </span>
+            </div>
+        </div>
+
+        <div class="contact2">
+            <div id="form-container">
+                <form id="contactForm">
+                    <input type="text" name="name" class="input" placeholder="Enter your name" required><br>
+                    <input type="email" name="email" class="input" placeholder="Enter email address" required><br>
+                    <input type="text" name="subject" class="input" placeholder="Enter your subject" required><br>
+                    <textarea name="message" class="textarea" placeholder="Message" required></textarea><br>
+                    <input type="submit" class="submit-button" value="Send Message">
+                </form>
+            </div>
+            <div id="success-message" class="success-message">
+                <p>Email sent successfully!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer-section">
+        <div class="footer-section1">
+            <h3>OUR GOAL</h3>
+            <p>The major goal of Rutero Model
+                School is to empower its students,
+                leveraging its abundant facilities,
+                with all they need to lead fulfilling 
+                lives anywhere in the world.
+            </p>
+        </div>
+        
+        <div class="footer-section2">
+            <h3>THE SCHOOL</h3>
+            <p><a href="#">HOME PAGE</a></p>
+            <p><a href="#">ABOUT US</a></p>
+            <p><a href="#">OUR GALLERY</a></p>
+            <a href="#">CONTACT US</a>
+        </div>
+    
+        <div class="footer-section3">
+            <h3>USEFUL CONTACTS</h3>
+            <p>
+                Principal<br>
+                Tel: +2347033697841<br>
+                Email: principal@rutero.com
+            </p>
+            
+            <p>
+                Vice Principal (Academics)<br>
+                Tel: +2347033697841
+            </p>
+
+            <p>
+               College Secretary<br>
+               Tel: +2347033697841
+            </p>        
+        </div>
+
+        <div class="footer-section4">
+            <h3>CONTACTS</h3>
+            <p>
+                Rutero Model School,<br>
+                Jeddo,<br>
+                Delta State,<br>
+                Nigeria. <br>
+                Tel: +2347033697841 <br>
+                Email: principal@rutero.com
+            </p>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 POWERED BY RETO TECH</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            const formObject = Object.fromEntries(formData.entries());
+
+            fetch('/send_email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formObject),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message === 'Email sent successfully!') {
+                    document.getElementById('form-container').style.display = 'none';
+                    document.getElementById('success-message').style.display = 'block';
+                } else {
+                    alert('Error sending email.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error sending email.');
+            });
+        });
+    </script>
+</body>
+</html>

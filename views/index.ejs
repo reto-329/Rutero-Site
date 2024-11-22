@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::HOME PAGE::</title>
+    <link rel="icon" href="Images/image.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header-img"><a href="/"><img src="Images/image.png" width="70px"></a></div>
+        <nav class="header-nav slide-in">
+            <a href="/">HOME</a>
+            <a href="/about">ABOUT US</a>
+            <a href="/admission">ADMISSION</a>
+            <a href="/gallery">GALLERY</a>
+            <a href="/contact">CONTACT US</a>
+        </nav>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.header-nav');
+            const hamburger = document.querySelector('.hamburger');
+            nav.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+    </script> 
+
+    <section class="slideshow">
+        <div class="slide">
+            <img src="Images/lab/lab12.jpg" alt="Image 1">
+            <div class="text">
+                <h1>Welcome To Rutero Model School</h1>
+                <p>A non-profit-making, comprehensive and co-educational school established <br> 
+                    to break new grounds in the area of facilitating and actualising the potential of its students
+                </p>
+                <div class="button-container">
+                    <a href="/contact" class="btn-link">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="Images/lab/lab23.jpg" alt="Image 2">
+            <div class="text">
+                <h1>Welcome To Rutero Model School</h1>
+                <p>A non-profit-making, comprehensive and co-educational school established <br> 
+                    to break new grounds in the area of facilitating and actualising the potential of its students
+                </p>
+                <div class="button-container">
+                    <a href="/contact" class="btn-link">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="Images/class/class1.jpg" alt="Image 3">
+            <div class="text">
+                <h1>Welcome To Rutero Model School</h1>
+                <p>A non-profit-making, comprehensive and co-educational school established <br> 
+                    to break new grounds in the area of facilitating and actualising the potential of its students
+                </p>
+                <div class="button-container">
+                    <a href="/contact" class="btn-link">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)"><span>&#10094;</span></a>
+        <a class="next" onclick="plusSlides(1)"><span>&#10095;</span></a>
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+    
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+    
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+    
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+    
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+    
+            let textElements = slides[slideIndex-1].getElementsByClassName("text")[0];
+            textElements.classList.add("show");
+            setTimeout(function() {
+                textElements.classList.remove("show");
+            }, 3000);
+        }
+    
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+    
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+    
+        function autoShowSlides() {
+            slideIndex++;
+            showSlides(slideIndex);
+            setTimeout(autoShowSlides, 5000); // Change slide every 5 seconds
+        }
+    
+        autoShowSlides();
+    </script>
+
+    <section class="admission-section">
+
+        <div class="admission1">
+            <div class="admission-round">
+                <img src="Images/book.png" alt="">
+            </div>
+            <div class="admission-info">
+                <h3>ADMISSIONS</h3>
+                <p>RUTERO gives admission to brilliant and
+                    intelligent young boys and girls every year.
+                </p>
+                <div class="admission-button">
+                    <a href="/admission" class="admission-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="admission2">
+            <div class="admission-round">
+                <img src="Images/clock-regular.png" alt="">
+            </div>
+            <div class="admission-info">
+                <h3>SCHOOL PROGRAMMES</h3>
+                <p>RUTERO offers your child a great deal of
+                    opportunities to explore all possibilities in life.
+                </p>
+                <div class="admission-button">
+                    <a href="/about" class="admission-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="admission3">
+            <div class="admission-round">
+                <img src="Images/calendar-days-solid.png" alt="">
+            </div>
+            <div class="admission-info">
+                <h3>FORECAST OF EVENTS</h3>
+                <p>Be in the know. Have a look at our well-
+                    planned timetable for the 2023 / 2024 session
+                </p>
+                <div class="admission-button">
+                    <a href="#" class="admission-btn">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-section-container">
+        <div class="news-div">
+            <div class="news-div1"><img src="Images/world.PNG" alt=""><span>NEWS</span></div>
+            <div>
+                <h3>OUR QUEST FOR EXCELLENCE</h3>
+                <p>by ADMIN | July 02, 2024 | Uncategorized</p>
+                <p>Rutero Model School examines the challenges parents and guardians face early 
+                    in the lives of their children. How best would they prepare them for the 
+                    arduous but interesting journey through life? How best would they lay a 
+                    solid foundation upon which the child's lifestyle and career will be... <br>
+                    <span><a href="/news1">read more</a></span>
+                </p>
+                
+            </div>
+
+            <div>
+                <h3>QUALITY OF EDUCATION</h3>
+                <p>by ADMIN | July 02, 2024 | Uncategorized</p>
+                <p>Rutero Model School is synonymous with qualitative education. It is the school of 
+                    choice for parents and guardians who have a thirst for excellence and insist on
+                    getting it. In both the pre-nursery, nursery, and primary sections, the Froebel 
+                    system is generally adapted, with a specialized method of teaching... <br>
+                    <span><a href="/news2">read more</a></span>
+                </p>
+                
+            </div>
+            
+            <div>
+                <h3>CURRICULUM</h3>
+                <p>by ADMIN | July 02, 2024 | Uncategorized</p>
+                <p>At the pre-nursery and nursery level, toddlers are formed into playgroups and are 
+                    taught to identify shapes, colors, and numbers. They are carefully and gradually 
+                    introduced to the letters of the alphabet and, by using teaching aids and fun learning, 
+                    smoothly taught to read and write. They are also... <br>
+                    <span><a href="/news3">read more</a></span>
+                </p>
+                
+            </div>
+            
+            <div>
+                <h3>ACADEMIC METHOD</h3>
+                <p>by ADMIN | July 02, 2024 | Uncategorized</p>
+                <p>At Rutero Model School, our academic method will be unique and structured to be effective, dynamic, 
+                    practical, intensive, and goal-oriented. We will achieve these via the following:... <br>
+                    <span><a href="/news4">read more</a></span>
+                </p>
+                
+            </div>
+        
+        </div>
+
+        <div class="announcements-div">
+            <div class="news-div1"><img src="Images/sound.PNG" alt=""><span>Announcements</span></div>
+            <br>
+            <div><img src="Images/PHOTO-2024-05-01-10-27-35.jpg" alt="" width="100%" height="100%"></div>
+            <div>
+                <h3>MESSAGE FROM THE PROPRIETOR</h3>
+                <p>by ADMIN | Sep 20, 2024 | Uncategorized</p>
+                <p>I have since engaged in deep contemplation regarding Rutero Model School 
+                    and its mission. I am also keenly aware of the challenges within education 
+                    system in Nigeria. With Rutero Model School, we embarked on a mission
+                    a labor of love for our community. The emphasis on memorization at our... <br>
+                    <span><a href="#">read more</a></span>
+                </p>    
+            </div>
+            
+            <div>
+                <h3>MESSAGE FROM THE PROPRIETOR</h3>
+                <p>by ADMIN | Sep 20, 2024 | Uncategorized</p>
+                <p>I have since engaged in deep contemplation regarding Rutero Model School
+                    and its mission. I am also keenly aware of the challenges within education
+                    system in Nigeria. With Rutero Model School, we embarked on a mission
+                    a labor of love for our community. The emphasis on memorization at our... <br>
+                    <span><a href="#">read more</a></span>
+                </p>    
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="footer-section">
+        <div class="footer-section1">
+            <h3>OUR GOAL</h3>
+            <p>The major goal of Rutero Model
+                School is to empower its students,
+                leveraging its abundant facilities,
+                with all they need to lead fulfilling 
+                lives anywhere in the world.
+            </p>
+        </div>
+        
+        <div class="footer-section2">
+            <h3>THE SCHOOL</h3>
+            <p><a href="/">HOME PAGE</a></p>
+            <p><a href="/about">ABOUT US</a></p>
+            <p><a href="/gallery">OUR GALLERY</a></p>
+            <a href="/contact">CONTACT US</a>
+        </div>
+
+        <div class="footer-section3">
+            <h3>USEFUL CONTACTS</h3>
+            <p>
+                Principal<br>
+                Tel: +2347033697841<br>
+                Email: principal@rutero.com
+            </p>
+            
+            <p>
+                Vice Principal (Academics)<br>
+                Tel: +2347033697841
+            </p>
+
+            <p>
+            College Secretary<br>
+            Tel: +2347033697841
+            </p>        
+        </div>
+
+        <div class="footer-section4">
+            <h3>CONTACTS</h3>
+            <p>
+                Rutero Model School <br>
+                No 9 Udumukpokpor Street, <br> 
+                Opposite Jeddo Pry Sch,  <br> 
+                Jeddo Okpe LGA of Delta State, <br> 
+                Nigeria. <br>
+                Tel: +2347033697841 <br>
+                Email: principal@rutero.com
+            </p>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 POWERED BY RETO TECH</p>
+    </footer>
+
+</body>
+</html>
