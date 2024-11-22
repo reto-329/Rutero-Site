@@ -1,0 +1,126 @@
+/* CONTACT PAGE */
+
+.contact-section {
+    padding: 30px 5%; /* Adjust padding for responsiveness */
+    display: flex;
+    flex-wrap: wrap; /* Allow contact sections to wrap on smaller screens */
+    justify-content: space-between; /* Space between the two contact sections */
+    gap: 20px; /* Space between items */
+}
+
+.contact1,
+.contact2 {
+    flex-basis: calc(50% - 20px); /* Adjust the width of each contact section */
+    margin-bottom: 20px; /* Margin between contact sections */
+}
+
+.contact1 div {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.contact1 div img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain; /* Maintain aspect ratio */
+    margin-right: 15px; /* Space between image and text */
+}
+
+.contact1 div span {
+    color: #4D5550;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 1.2px;
+    line-height: 1.5;
+}
+
+.input,
+.textarea {
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #4D5550;
+    font-weight: normal;
+    border: 1px solid #87CEEB;
+    background-color: #f0f8ff; /* Lighter blue background */
+    opacity: 0.9;
+    width: calc(100% - 30px);
+    border-radius: 8px;
+}
+
+.textarea {
+    height: 180px;
+    resize: none;
+}
+
+.submit-button {
+    padding: 12px 25px;
+    border: 2px solid #87CEEB;
+    background-color: transparent;
+    color: #87CEEB;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #87CEEB;
+    color: white;
+}
+
+.success-message {
+    display: none;
+    padding: 12px;
+    background-color: #87CEEB;
+    color: #fff;
+    margin-top: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Responsive: Adjust layout on smaller screens */
+@media (max-width: 768px) {
+    .contact1,
+    .contact2 {
+        flex-basis: 100%; /* Make each contact section take full width */
+    }
+
+    .contact1 div {
+        flex-direction: column; /* Stack address, phone, and email vertically */
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .img1 {
+        max-width: 60px; /* Slightly larger icons on mobile */
+    }
+
+    .input,
+    .textarea {
+        font-size: 14px; /* Slightly smaller font size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 20px 3%;
+    }
+
+    .input,
+    .textarea {
+        font-size: 14px;
+    }
+
+    .submit-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .img1 {
+        max-width: 50px;
+    }
+}
+
+/* END OF CONTACT PAGE */

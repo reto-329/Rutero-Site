@@ -1,0 +1,92 @@
+/* ABOUT US PAGE*/
+.about-section{
+    padding: 30px 50px;
+    color: #4D5550;
+    font-size: 19px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+
+.info-section{
+    display: flex; 
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #87CEEB;
+}
+
+.info-round{
+    border: 1px solid white;
+    background-color: white;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Add this line */
+}
+
+.info-round img {
+    max-width: 80%; /* Adjust the size of the image */
+    max-height: 65%; /* Adjust the size of the image */
+}
+
+.info-div {
+   text-align: center;
+   padding: 10px;
+   color: #4D5550;
+   line-height: 1.5;
+   font-size: 18px;
+}
+
+.info-div {
+   text-align: center;
+   padding: 10px;
+}
+
+.info-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff; /* Text color */
+    background-color: #87CEEB;
+    border: 3px solid white;
+    border-radius: 5px; /* Optional: Rounded corners */
+    transition: all 0.3s ease;
+    font-weight: bolder;
+}
+
+.info-btn:hover::after {
+    content: " >"; /* Add this line to add ">" after "Read More" */
+    font-weight: bolder;
+}
+
+.info-btn:hover {
+    background-color: #ffffff; /* Background color on hover */
+    color: #87CEEB; /* Text color on hover */
+}
+
+@media (max-width: 768px) {
+    .info-section {
+        flex-wrap: wrap;
+        flex-basis: 100%;
+    }
+
+    .info-section div {
+        margin-bottom: 10px;
+    }
+
+    .info-round{
+        border: 1px solid white;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto; /* Add this line */
+    }
+}
+
+/* END OF ABOUT US PAGE */
