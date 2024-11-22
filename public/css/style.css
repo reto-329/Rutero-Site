@@ -91,8 +91,9 @@
         top: 19.5%;
         left: 50%;
         transform: translateX(-50%);
-        background-color: #f8f8f8;
-        z-index: 1;
+        background-color: #f8f8f8 !important;
+        opacity: 0.95 !important; /* Remove any transparency */
+        z-index: 1000; /* Ensure it's on top of other elements */
     }
 
     .header-nav a {
