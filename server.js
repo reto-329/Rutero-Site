@@ -1,8 +1,6 @@
 const express = require("express");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
-const express = require("express");
-const ejs = require("ejs");
 const nodemailer = require("nodemailer");
 require("dotenv").config(); // Load environment variables from .env file
 
