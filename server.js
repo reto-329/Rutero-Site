@@ -1,6 +1,8 @@
 const express = require("express");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
+const express = require("express");
+const ejs = require("ejs");
 const nodemailer = require("nodemailer");
 require("dotenv").config(); // Load environment variables from .env file
 
@@ -78,7 +80,9 @@ app.post('/send_email', (req, res) => {
         auth: {
             user: process.env.EMAIL_USER,
             pass: process.env.EMAIL_PASS,
-        }
+        },
+        logger: true, // Enable logging
+        debug: true,  // Enable debugging output
     });
 
     // Email options
@@ -93,8 +97,8 @@ app.post('/send_email', (req, res) => {
     // Send email
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.error('Error sending email:', error);
-            res.status(500).json({ message: 'Error sending email.', error });
+            console.error('Error details:', error); // Log detailed error information
+            res.status(500).json({ message: 'Error sending email.', error: error.message });
         } else {
             console.log('Email sent successfully:', info.response);
             res.status(200).json({ message: 'Email sent successfully!' });
